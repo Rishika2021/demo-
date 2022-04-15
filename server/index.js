@@ -14,14 +14,14 @@ app.post('/bfhl',(req,res)=>{
   try{
       let array=req.body.data;
        for( let i=0;i<array.length;i++){
-          if((array[i][0]>="0" && array[i][0]<="9")|| typeof(array[i])){
+          if((array[i][0]>="0" && array[i][0]<="9")|| typeof(array[i])=="number"){
               numbers.push(array[i])
           }
           else{
               alphabets.push(array[i])
           }
        }
-       res.status.send(200).send({
+       res.status(200).send({
            is_success :true,
            user_id :"Rishika_Sahu_30112000",
            email:'sahurishika9@gmail.com',
